@@ -30,6 +30,7 @@ In addition to **ride.py** file, we also created another file **driver.py** that
 
 ```python
 # Import only the Driver class
+from driver import Driver
 
 ```
 
@@ -40,7 +41,8 @@ Create a `Passenger` class that doesn't contain anything in the following cell:
 
 ```python
 # Create Passenger class
-
+class Passenger:#defines the class name
+    pass #tells python to do nothing for now,acts like a placeholder 
 ```
 
 ## Instances
@@ -50,9 +52,9 @@ Now practice using these classes to create instances. First, make two instances 
 
 ```python
 # Two instances of the Passenger class
-meryl = None
-daniel = None
-
+meryl = Passenger() #creates a new object of the passenger
+daniel = Passenger()
+# Each call to Passenger() creates a unique instance in memory.
 print(meryl)
 print(daniel)
 ```
@@ -62,8 +64,8 @@ Next, make one instance of the `Driver` class and assign it to the variable, `fl
 
 ```python
 # One instance of the Driver class
-flatiron_taxi = None
-print(flatiron_taxi)
+flatiron_taxi = Driver()#creates a new object instance of the Driver class
+print(flatiron_taxi)# flatiron_taxi now holds that instance
 ```
 
 Finally, make two instances of the `Ride` class and assign them to `ride_to_school` and `ride_home`. 
@@ -71,8 +73,10 @@ Finally, make two instances of the `Ride` class and assign them to `ride_to_scho
 
 ```python
 # Two instances of the Ride class
-ride_to_school = None
-ride_home = None
+# Ride() creates a new instance (object) of the Ride class
+#Each time you call Ride(), a different instance is created.
+ride_to_school = Ride()
+ride_home = Ride()
 
 print(ride_to_school)
 print(ride_home)
